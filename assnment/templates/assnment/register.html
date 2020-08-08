@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>create an account</title>
+        <link rel="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+        <link href="/dashboard/stylesheets/normalize.css" rel="stylesheet" type="text/css" /><link href="/dashboard/stylesheets/all.css" rel="stylesheet" type="text/css" />
+    <link href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/3.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+
+    <script src="/dashboard/javascripts/modernizr.js" type="text/javascript"></script>
+
+
+    <link href="/dashboard/images/favicon.png" rel="icon" type="image/png" />
+
+    </head>
+    <body>
+        
+        {% load crispy_forms_tags %}
+        <h1>create an account</h1>
+        <form method="POST" class="form-group">
+            {% csrf_token %}
+            {{form|crispy}}
+            <button type="submit" class="btn btn-success" >register</button>
+        </form>
+    </body>
+</html>
